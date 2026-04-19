@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Curso Disserta 15D — Dissertação de Mestrado em 15 Dias | Dra. Nathalia Cavichiolli</title>
-  <meta name="description" content="O Método V.O.E. completo aplicado à sua dissertação de mestrado. Trilha em vídeo com 15 dias de execução, Kit de prompts incluso e 3 Masterclasses bônus. Para mestrandos com dados coletados e prazo.">
+  <meta name="description" content="O Método V.O.E. completo aplicado à sua dissertação de mestrado. Programa em vídeo com 15 dias de execução, Kit de prompts incluso e aula dedicada de Revisão Bibliográfica. Para mestrandos com dados coletados e prazo.">
 
   <!-- Meta Pixel — nath_disserta_15d_5037 -->
   <script>
@@ -190,7 +190,7 @@
     }
     .card-lift:hover {
       transform: translateY(-4px) !important;
-      box-shadow: 0 12px 40px rgba(26, 46, 34, 0.12) !important;
+      box-shadow: 0 12px 40px rgba(14, 26, 38, 0.12) !important;
     }
 
     /* Heading underline reveal */
@@ -319,6 +319,46 @@
       .scroll-snap-x > * { flex: 0 0 320px; }
     }
 
+    /* 5b. Marquee infinita (mobile e desktop) */
+    .marquee-mobile {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
+    }
+    .marquee-mobile .marquee-track {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      animation: marquee-scroll 32s linear infinite;
+    }
+    .marquee-mobile .marquee-track > * {
+      flex: 0 0 280px;
+    }
+    .marquee-mobile .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @media (min-width: 640px) {
+      .marquee-mobile .marquee-track > * { flex: 0 0 320px; }
+    }
+    @media (min-width: 1024px) {
+      .marquee-mobile .marquee-track {
+        gap: 1.5rem;
+        animation-duration: 48s;
+      }
+      .marquee-mobile .marquee-track > * {
+        flex: 0 0 340px;
+      }
+    }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-mobile .marquee-track {
+        animation: none;
+      }
+    }
+
     /* 6. Section overlap (cards that invade next section) */
     .overlap-bottom {
       position: relative;
@@ -441,13 +481,13 @@
       backdrop-filter: blur(12px) saturate(150%);
       -webkit-backdrop-filter: blur(12px) saturate(150%);
       border: 1px solid rgba(255, 255, 255, 0.7);
-      box-shadow: 0 4px 24px rgba(26, 46, 34, 0.06);
+      box-shadow: 0 4px 24px rgba(14, 26, 38, 0.06);
       transition: background 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
     }
     .glass-light:hover {
       background: rgba(255, 255, 255, 0.7);
       border-color: rgba(201, 169, 110, 0.3);
-      box-shadow: 0 8px 32px rgba(26, 46, 34, 0.1);
+      box-shadow: 0 8px 32px rgba(14, 26, 38, 0.1);
     }
 
     /* Glass badge/pill (small inline elements) */
@@ -460,7 +500,7 @@
 
     /* Glass sticky bar */
     .glass-sticky {
-      background: rgba(26, 46, 34, 0.85);
+      background: rgba(14, 26, 38, 0.85);
       backdrop-filter: blur(16px) saturate(180%);
       -webkit-backdrop-filter: blur(16px) saturate(180%);
       border-top: 1px solid rgba(201, 169, 110, 0.2);
@@ -485,10 +525,10 @@
 
     /* Fallback for browsers without backdrop-filter */
     @supports not (backdrop-filter: blur(1px)) {
-      .glass-dark { background: rgba(26, 46, 34, 0.92); border-color: rgba(201, 169, 110, 0.3); }
+      .glass-dark { background: rgba(14, 26, 38, 0.92); border-color: rgba(201, 169, 110, 0.3); }
       .glass-light { background: rgba(255, 255, 255, 0.9); }
       .glass-badge { background: rgba(255, 255, 255, 0.8); }
-      .glass-sticky { background: rgba(26, 46, 34, 0.95); }
+      .glass-sticky { background: rgba(14, 26, 38, 0.95); }
       .glass-quote { background: rgba(201, 169, 110, 0.08); }
       .glass-pricing { background: rgba(255, 255, 255, 0.95); }
     }
@@ -546,26 +586,33 @@
         <img src="img/fotos/disserta-15d-logo-retangular-claro.webp" alt="Logo Curso Disserta 15D - Método V.O.E." class="h-20 sm:h-28 md:h-36 w-auto" loading="eager">
       </div>
 
-      <!-- Headline -->
-      <h1 class="font-cormorant font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-navy-premium text-center max-w-4xl mx-auto leading-tight mb-6" data-animate="fade-up" data-delay="250">
-        Sua dissertação de mestrado <span class="text-highlight">finalizada em 15 dias.</span> Com o sistema de pensamento que transforma qualquer texto acadêmico em escrita autoral.
-      </h1>
+      <!-- Layout 2 colunas: Headline + Vídeo -->
+      <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-center mb-10">
 
-      <!-- Subheadline -->
-      <p class="font-dm text-base sm:text-lg text-navy-premium text-center max-w-3xl mx-auto mb-10 leading-relaxed" data-animate="fade-up" data-delay="350">
-        O Curso Disserta 15D é o Método V.O.E. completo aplicado à sua dissertação: trilha em vídeo com 15 dias de execução, Kit de prompts incluso, Revisão Bibliográfica como aula dedicada e 3 Masterclasses bônus. Para mestrandos com dados coletados e prazo de qualificação ou defesa.
-      </p>
+        <!-- Coluna Esquerda: Headline + Sub -->
+        <div>
+          <h1 class="font-cormorant font-bold text-3xl sm:text-4xl md:text-5xl text-navy-premium leading-tight mb-6" data-animate="fade-up" data-delay="250">
+            Sua dissertação de mestrado <span class="text-highlight">finalizada em 15 dias.</span> Com o sistema de pensamento que transforma qualquer texto acadêmico em escrita autoral.
+          </h1>
+          <p class="font-dm text-base sm:text-lg text-navy-premium leading-relaxed" data-animate="fade-up" data-delay="350">
+            O Curso Disserta 15D é o Método V.O.E. completo aplicado à sua dissertação: programa em vídeo com 15 dias de execução, Kit de prompts incluso e Revisão Bibliográfica como aula dedicada. Para mestrandos com dados coletados e prazo de qualificação ou defesa.
+          </p>
+        </div>
 
-      <!-- VSL Vídeo -->
-      <div class="max-w-3xl mx-auto mb-10" data-animate="scale" data-delay="450">
-        <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-2xl bg-navy-premium">
-          <iframe id="vsl-player" src="" class="absolute inset-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen data-src="https://www.youtube.com/embed/VIDEO_ID?rel=0&modestbranding=1"></iframe>
-          <!-- Thumbnail placeholder até ter o VIDEO_ID -->
-          <div id="vsl-placeholder" class="absolute inset-0 flex flex-col items-center justify-center cursor-pointer bg-navy-premium">
-            <svg class="w-16 h-16 sm:w-20 sm:h-20 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-            <p class="font-montserrat font-semibold text-champagne text-sm sm:text-base">Assista a apresentação do Curso</p>
+        <!-- Coluna Direita: Vídeo YouTube (formato vertical) -->
+        <div class="relative flex justify-center" data-animate="scale" data-delay="350">
+          <div class="relative w-full max-w-[360px]">
+            <div class="flex justify-center mb-3">
+              <span class="inline-flex items-center gap-2 bg-dourado text-navy-premium font-montserrat font-semibold text-sm px-4 py-2 rounded-full shadow-lg">
+                Recado importante no vídeo
+              </span>
+            </div>
+            <div class="relative w-full aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl bg-navy-premium">
+              <iframe src="https://www.youtube.com/embed/0zm_M7hxDtU?rel=0&modestbranding=1" class="absolute inset-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
+
       </div>
 
       <!-- CTA -->
@@ -599,7 +646,106 @@
   </section>
 
   <!-- ============================================================ -->
-  <!-- SEÇÃO 2: BARRA DE LOGOS -->
+  <!-- SEÇÃO 2: DEPOIMENTOS EM VÍDEO -->
+  <!-- ============================================================ -->
+  <section class="bg-navy-premium py-16 md:py-24 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Badge + Título -->
+      <div class="text-center mb-12" data-animate="fade-up">
+        <span class="font-montserrat font-semibold text-xs tracking-[0.2em] text-dourado uppercase mb-4 block">
+          <svg class="w-4 h-4 inline-block mr-1 -mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          Depoimentos Reais
+          <svg class="w-4 h-4 inline-block ml-1 -mt-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </span>
+        <h2 class="font-cormorant font-bold text-2xl sm:text-3xl md:text-4xl text-white leading-tight mb-4">
+          Opinião de quem confia no método
+        </h2>
+        <p class="font-dm text-base text-gray-400 max-w-2xl mx-auto">
+          Veja os resultados reais de pessoas que aplicaram o método e alcançaram seus objetivos.
+        </p>
+        <div class="w-16 h-0.5 bg-dourado mx-auto mt-6"></div>
+      </div>
+
+      <!-- Cards de depoimentos -->
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-12 max-w-5xl mx-auto mb-12">
+
+        <!-- Card Joice -->
+        <div class="glass-dark rounded-2xl p-6 sm:p-8" data-animate="fade-up" data-delay="100">
+          <blockquote class="font-cormorant font-bold text-lg sm:text-xl text-white text-center mb-3 leading-snug">
+            "Foi um divisor de águas na minha vida acadêmica."
+          </blockquote>
+          <p class="font-dm text-sm text-gray-400 text-center mb-6">
+            Joice Godoy Landre — Fisioterapeuta
+          </p>
+          <div class="flex justify-center mb-6">
+            <div class="relative w-full max-w-[280px] aspect-[9/16] rounded-xl overflow-hidden shadow-xl">
+              <iframe src="https://www.youtube.com/embed/Ubpsn7-8WQI?rel=0&modestbranding=1" class="absolute inset-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center gap-2">
+            <span class="inline-flex items-center gap-1.5 bg-navy-escuro text-gray-300 font-dm text-xs px-3 py-1.5 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-dourado" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm.75-13a.75.75 0 00-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 000-1.5h-3.25V5z"/></svg>
+              Economia de tempo na escrita
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-navy-escuro text-gray-300 font-dm text-xs px-3 py-1.5 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-green-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clip-rule="evenodd"/></svg>
+              Entrada no mestrado
+            </span>
+          </div>
+        </div>
+
+        <!-- Card Acácio -->
+        <div class="glass-dark rounded-2xl p-6 sm:p-8" data-animate="fade-up" data-delay="200">
+          <blockquote class="font-cormorant font-bold text-lg sm:text-xl text-white text-center mb-3 leading-snug">
+            "Eu me senti bem seguro, bem apoiado e estruturado."
+          </blockquote>
+          <p class="font-dm text-sm text-gray-400 text-center mb-6">
+            Acácio Lima dos Santos — Servidor público, jurista e palestrante
+          </p>
+          <div class="flex justify-center mb-6">
+            <div class="relative w-full max-w-[280px] aspect-[9/16] rounded-xl overflow-hidden shadow-xl">
+              <iframe src="https://www.youtube.com/embed/34y3N-FlPu0?rel=0&modestbranding=1" class="absolute inset-0 w-full h-full" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+          <div class="flex flex-wrap justify-center gap-2">
+            <span class="inline-flex items-center gap-1.5 bg-navy-escuro text-gray-300 font-dm text-xs px-3 py-1.5 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-purple-400" fill="currentColor" viewBox="0 0 20 20"><path d="M10 1a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 0110 1zM5.05 3.05a.75.75 0 011.06 0l1.062 1.06a.75.75 0 11-1.06 1.062L5.05 4.11a.75.75 0 010-1.06zm9.9 0a.75.75 0 010 1.06l-1.06 1.062a.75.75 0 01-1.062-1.061l1.061-1.06a.75.75 0 011.06 0zM10 7a3 3 0 100 6 3 3 0 000-6zm-6.25 3a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5H4.5a.75.75 0 01-.75-.75zm12 0a.75.75 0 01.75-.75h1.5a.75.75 0 010 1.5h-1.5a.75.75 0 01-.75-.75zM5.05 16.95a.75.75 0 011.06-1.06l1.062 1.06a.75.75 0 01-1.061 1.062L5.05 16.95zm9.9 0a.75.75 0 01-1.06-1.06l1.06-1.062a.75.75 0 111.062 1.061l-1.061 1.06zM10 16.25a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5a.75.75 0 01.75-.75z"/></svg>
+              Uso da IA de forma ética
+            </span>
+            <span class="inline-flex items-center gap-1.5 bg-navy-escuro text-gray-300 font-dm text-xs px-3 py-1.5 rounded-lg">
+              <svg class="w-3.5 h-3.5 text-dourado" fill="currentColor" viewBox="0 0 24 24"><path d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/></svg>
+              Método V.O.E. comprovado
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Social proof bar -->
+      <div class="flex items-center justify-center gap-4" data-animate="fade-up" data-delay="300">
+        <div class="glass-dark rounded-full px-6 py-3 flex items-center gap-4">
+          <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+          <div class="flex -space-x-2">
+            <div class="w-8 h-8 rounded-full bg-navy-academico border-2 border-navy-premium overflow-hidden">
+              <img src="img/fotos/nathalia-profissional.webp" alt="" class="w-full h-full object-cover">
+            </div>
+            <div class="w-8 h-8 rounded-full bg-dourado/30 border-2 border-navy-premium flex items-center justify-center">
+              <span class="text-xs text-champagne font-bold">J</span>
+            </div>
+            <div class="w-8 h-8 rounded-full bg-navy-academico border-2 border-navy-premium flex items-center justify-center">
+              <span class="text-xs text-champagne font-bold">A</span>
+            </div>
+          </div>
+          <span class="font-montserrat font-semibold text-sm text-white">+3.300 alunos satisfeitos</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- SEÇÃO 3: BARRA DE LOGOS -->
   <!-- ============================================================ -->
   <section class="bg-branco-frio py-10 md:py-14">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -758,14 +904,14 @@
       </p>
 
       <div class="bento-grid mb-10">
-        <!-- Card 1: Trilha em vídeo (HERO - spans 2 cols on desktop) -->
+        <!-- Card 1: Programa em vídeo (HERO - spans 2 cols on desktop) -->
         <div class="bento-hero glass-light rounded-2xl p-8">
           <div class="w-14 h-14 bg-navy-claro rounded-xl flex items-center justify-center mb-5">
             <svg class="w-7 h-7 text-navy-academico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/></svg>
           </div>
-          <h3 class="font-montserrat font-semibold text-lg md:text-xl text-navy-premium mb-4">Trilha completa em vídeo com o Método V.O.E.</h3>
+          <h3 class="font-montserrat font-semibold text-lg md:text-xl text-navy-premium mb-4">Programa completo em vídeo com o Método V.O.E.</h3>
           <p class="font-dm text-base text-navy-premium/80 leading-relaxed">
-            7 módulos do Tronco Comum (Diagnóstico, Ordenação, Estruturação, Elaboração, Singularização, Refinamento, Interiorização) + Trilha Disserta 15D com 15 dias em 5 estágios. Inclui Revisão Bibliográfica como aula dedicada. Aulas práticas de 3 a 5 minutos cada, com execução imediata.
+            O Método V.O.E. completo em 7 módulos (Diagnóstico, Ordenação, Estruturação, Elaboração, Singularização, Refinamento, Interiorização) aplicados à sua dissertação em 15 dias de execução, organizados em 5 estágios. Inclui Revisão Bibliográfica como aula dedicada. Aulas práticas de 3 a 5 minutos cada, com execução imediata.
           </p>
           <div class="flex flex-wrap gap-4 mt-6">
             <span class="glass-badge rounded-full px-3 py-1 font-montserrat text-xs text-navy-academico">7 módulos + trilha 15D</span>
@@ -785,14 +931,14 @@
           </p>
         </div>
 
-        <!-- Card 3: 3 Masterclasses -->
+        <!-- Card 3: Revisão Bibliográfica -->
         <div class="glass-light rounded-2xl p-6">
           <div class="w-12 h-12 bg-navy-claro rounded-lg flex items-center justify-center mb-4">
-            <svg class="w-6 h-6 text-navy-academico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"/></svg>
+            <svg class="w-6 h-6 text-navy-academico" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
           </div>
-          <h3 class="font-montserrat font-semibold text-base text-navy-premium mb-3">3 Masterclasses bônus</h3>
+          <h3 class="font-montserrat font-semibold text-base text-navy-premium mb-3">Revisão Bibliográfica como aula dedicada</h3>
           <p class="font-dm text-sm text-navy-premium/80 leading-relaxed">
-            Resposta aos Revisores, Apresentação Acadêmica com IA e Feedback do Orientador sem Sofrimento. Exclusivas deste curso.
+            O capítulo que mais trava na dissertação ganha aula própria: como ler, sintetizar e posicionar criticamente dezenas de artigos sem travar na escrita.
           </p>
         </div>
 
@@ -811,7 +957,7 @@
       <!-- Badge fechamento com overlap -->
       <div class="glass-light rounded-2xl p-6 text-center max-w-3xl mx-auto overlap-bottom">
         <p class="font-dm text-sm text-navy-premium leading-relaxed">
-          Sistema completo: método em vídeo + ferramentas em PDF + 3 masterclasses + comunidade. Desenvolvido por pesquisadora com 15 anos de orientação real.
+          Sistema completo: método em vídeo + ferramentas em PDF + Revisão Bibliográfica + comunidade. Desenvolvido por pesquisadora com 15 anos de orientação real.
         </p>
       </div>
     </div>
@@ -826,30 +972,58 @@
         Qual desses depoimentos você gostaria que fosse o seu?
       </h2>
 
-      <div class="scroll-snap-x">
-        <div class="glass-light rounded-xl p-6">
-          <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          <p class="font-dm text-sm text-navy-premium leading-relaxed">
-            "Finalizei minha dissertação em 14 dias usando o método. A banca aprovou sem pedir reformulação de nenhum capítulo."
-          </p>
-        </div>
-        <div class="glass-light rounded-xl p-6">
-          <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          <p class="font-dm text-sm text-navy-premium leading-relaxed">
-            "Usei os prompts para montar problema, objetivos e metodologia. Meu orientador disse que foi a melhor versão que já recebeu."
-          </p>
-        </div>
-        <div class="glass-light rounded-xl p-6">
-          <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          <p class="font-dm text-sm text-navy-premium leading-relaxed">
-            "A Revisão Bibliográfica era o capítulo que mais me travava. Com a aula dedicada, consegui posicionar 40 fontes em 3 dias."
-          </p>
-        </div>
-        <div class="glass-light rounded-xl p-6">
-          <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
-          <p class="font-dm text-sm text-navy-premium leading-relaxed">
-            "Minha dissertação tem 87 páginas e o orientador disse que ficou mais coesa do que a maioria das que ele orienta. Tudo com IA ética e prova de autoria."
-          </p>
+      <div class="marquee-mobile">
+        <div class="marquee-track">
+          <!-- Set original -->
+          <div class="glass-light rounded-xl p-6">
+            <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-dm text-sm text-navy-premium leading-relaxed">
+              "Finalizei minha dissertação em 14 dias usando o método. A banca aprovou sem pedir reformulação de nenhum capítulo."
+            </p>
+          </div>
+          <div class="glass-light rounded-xl p-6">
+            <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-dm text-sm text-navy-premium leading-relaxed">
+              "Usei os prompts para montar problema, objetivos e metodologia. Meu orientador disse que foi a melhor versão que já recebeu."
+            </p>
+          </div>
+          <div class="glass-light rounded-xl p-6">
+            <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-dm text-sm text-navy-premium leading-relaxed">
+              "A Revisão Bibliográfica era o capítulo que mais me travava. Com a aula dedicada, consegui posicionar 40 fontes em 3 dias."
+            </p>
+          </div>
+          <div class="glass-light rounded-xl p-6">
+            <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-dm text-sm text-navy-premium leading-relaxed">
+              "Minha dissertação tem 87 páginas e o orientador disse que ficou mais coesa do que a maioria das que ele orienta. Tudo com IA ética e prova de autoria."
+            </p>
+          </div>
+          <!-- Clone para loop continuo (oculto no desktop) -->
+          <div class="glass-light rounded-xl p-6 marquee-clone" aria-hidden="true">
+            <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-dm text-sm text-navy-premium leading-relaxed">
+              "Finalizei minha dissertação em 14 dias usando o método. A banca aprovou sem pedir reformulação de nenhum capítulo."
+            </p>
+          </div>
+          <div class="glass-light rounded-xl p-6 marquee-clone" aria-hidden="true">
+            <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-dm text-sm text-navy-premium leading-relaxed">
+              "Usei os prompts para montar problema, objetivos e metodologia. Meu orientador disse que foi a melhor versão que já recebeu."
+            </p>
+          </div>
+          <div class="glass-light rounded-xl p-6 marquee-clone" aria-hidden="true">
+            <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-dm text-sm text-navy-premium leading-relaxed">
+              "A Revisão Bibliográfica era o capítulo que mais me travava. Com a aula dedicada, consegui posicionar 40 fontes em 3 dias."
+            </p>
+          </div>
+          <div class="glass-light rounded-xl p-6 marquee-clone" aria-hidden="true">
+            <svg class="w-8 h-8 text-dourado mb-4" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-dm text-sm text-navy-premium leading-relaxed">
+              "Minha dissertação tem 87 páginas e o orientador disse que ficou mais coesa do que a maioria das que ele orienta. Tudo com IA ética e prova de autoria."
+            </p>
+          </div>
         </div>
       </div>
     </div>
@@ -943,7 +1117,7 @@
                 </div>
               </div>
               <p class="font-dm text-sm text-navy-premium leading-relaxed">
-                O Módulo 1 (Ordenação) ensina o Protocolo 2-4h/semana: rituais de foco e gestão de tempo acadêmico que funcionam em blocos curtos. A Trilha Disserta 15D tem 15 dias em 5 estágios, com aulas de 3 a 5 minutos cada.
+                O Módulo 1 (Ordenação) ensina o Protocolo 2-4h/semana: rituais de foco e gestão de tempo acadêmico que funcionam em blocos curtos. O programa Disserta 15D tem 15 dias de execução em 5 estágios, com aulas de 3 a 5 minutos cada.
               </p>
             </div>
             <div class="flex gap-4">
@@ -1152,18 +1326,23 @@
   <!-- SEÇÃO 12: CARD PRODUTO -->
   <!-- ============================================================ -->
   <section class="bg-branco-frio py-16 md:py-24">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mx-auto">
-        <div>
-          <!-- Mockup do Curso -->
-          <picture class="block mb-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
+
+        <!-- Coluna esquerda: Mockup + Preço (40%) -->
+        <div class="lg:col-span-2 lg:sticky lg:top-24">
+          <picture class="block mb-6">
             <source srcset="img/fotos/curso-disserta-15d-mockup.webp" type="image/webp">
-            <img src="img/fotos/curso-disserta-15d-mockup.png" alt="Mockup do Curso Disserta 15D — Dissertação de Mestrado em 15 Dias" class="w-full max-w-lg mx-auto" width="1100" height="630" loading="lazy">
+            <img src="img/fotos/curso-disserta-15d-mockup.png" alt="Mockup do Curso Disserta 15D — Dissertação de Mestrado em 15 Dias" class="w-full max-w-md mx-auto lg:mx-0" width="1100" height="630" loading="lazy">
           </picture>
-          <h2 class="font-cormorant font-bold text-3xl sm:text-4xl text-navy-premium mb-1">Curso Disserta 15D</h2>
-          <p class="font-cormorant italic text-lg text-navy-academico mb-2">Dissertação de Mestrado em 15 Dias</p>
-          <p class="font-montserrat font-semibold text-2xl text-navy-premium mb-1">R$397 <span class="font-dm text-sm font-normal text-navy-premium/60">(ou 12x R$41,06)</span></p>
-          <p class="font-dm text-sm text-navy-premium/80 leading-relaxed mb-8">
+          <h2 class="font-cormorant font-bold text-3xl sm:text-4xl text-navy-premium mb-1 text-center lg:text-left">Curso Disserta 15D</h2>
+          <p class="font-cormorant italic text-lg text-navy-academico mb-4 text-center lg:text-left">Dissertação de Mestrado em 15 Dias</p>
+          <p class="font-montserrat font-semibold text-2xl text-navy-premium mb-1 text-center lg:text-left">R$397 <span class="font-dm text-sm font-normal text-navy-premium/60">(ou 12x R$41,06)</span></p>
+        </div>
+
+        <!-- Coluna direita: Descrição + Blocos + Checks (60%) -->
+        <div class="lg:col-span-3">
+          <p class="font-dm text-base text-navy-premium/80 leading-relaxed mb-8">
             Para quem precisa escrever dissertação de mestrado com sistema completo: mestrando, mestrando em qualificação ou pesquisador submetendo a agência de fomento.
           </p>
 
@@ -1190,7 +1369,7 @@
           <div class="space-y-3">
             <div class="flex items-start gap-3">
               <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-              <span class="font-dm text-sm text-navy-premium">Método V.O.E. completo em vídeo (7 módulos + trilha 15D)</span>
+              <span class="font-dm text-sm text-navy-premium">Método V.O.E. completo em vídeo (7 módulos + 15 dias de execução em 5 estágios)</span>
             </div>
             <div class="flex items-start gap-3">
               <svg class="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
@@ -1206,6 +1385,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -1321,7 +1501,7 @@
           </div>
           <h3 class="font-montserrat font-semibold text-base text-navy-premium mb-2">Aplique à sua dissertação de mestrado</h3>
           <p class="font-dm text-sm text-navy-premium/80 leading-relaxed mb-2">
-            A Trilha Disserta 15D aplica o método ao formato específico da dissertação de mestrado: 15 dias em 5 estágios, com aulas curtas de 3 a 5 minutos de execução pura usando o Kit incluso. Cobertura completa: da Revisão Bibliográfica ao Abstract.
+            O Disserta 15D aplica o método ao formato específico da dissertação de mestrado: 15 dias de execução em 5 estágios, com aulas curtas de 3 a 5 minutos de execução pura usando o Kit incluso. Cobertura completa: da Revisão Bibliográfica ao Abstract.
           </p>
           <p class="font-cormorant italic text-sm text-navy-academico">15 dias, uma dissertação defensável.</p>
         </div>
@@ -1435,7 +1615,7 @@
           </div>
           <div class="mb-4">
             <span class="font-montserrat font-semibold text-xs text-green-600 uppercase tracking-wider">Depois:</span>
-            <p class="font-dm text-sm text-navy-premium/80 leading-relaxed mt-1">Refez a dissertação usando a Trilha Disserta 15D + Módulo 4 (Singularização). Apresentou na qualificação com segurança. Banca aprovou sem pedido de reescrita.</p>
+            <p class="font-dm text-sm text-navy-premium/80 leading-relaxed mt-1">Refez a dissertação usando o programa Disserta 15D + Módulo 4 (Singularização). Apresentou na qualificação com segurança. Banca aprovou sem pedido de reescrita.</p>
           </div>
           <span class="inline-block bg-yellow-50 text-yellow-800 font-dm text-sm px-3 py-1 rounded">cenário plausível, baseado no padrão de uso documentado</span>
         </div>
@@ -1502,7 +1682,7 @@
             </div>
             <div>
               <p class="font-dm text-sm text-navy-premium leading-relaxed">
-                <strong class="font-montserrat font-semibold">Execute a Trilha Disserta 15D com o Kit de prompts, na sequência indicada pelo Diagnóstico.</strong> Passe pelos Módulos 4 e 5 (Singularização e Refinamento) como verificação final antes de submeter.
+                <strong class="font-montserrat font-semibold">Execute o programa Disserta 15D com o Kit de prompts, na sequência indicada pelo Diagnóstico.</strong> Passe pelos Módulos 4 e 5 (Singularização e Refinamento) como verificação final antes de submeter.
               </p>
             </div>
           </div>
@@ -1540,7 +1720,7 @@
             </div>
 
             <div class="glass-light rounded-xl p-6">
-              <h4 class="font-montserrat font-semibold text-base text-navy-premium mb-2">Trilha Disserta 15D (15 dias em 5 estágios)</h4>
+              <h4 class="font-montserrat font-semibold text-base text-navy-premium mb-2">Disserta 15D (15 dias de execução em 5 estágios)</h4>
               <p class="font-dm text-sm text-navy-premium/80 leading-relaxed mb-3">Aplicação do Método V.O.E. ao formato específico da dissertação de mestrado. Aulas curtas de 3 a 5 minutos de execução pura.</p>
               <div class="flex items-start gap-2">
                 <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
@@ -1916,10 +2096,6 @@
             </li>
             <li class="flex items-start gap-3">
               <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
-              <span class="font-dm text-sm text-navy-premium">3 Masterclasses bônus</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
               <span class="font-dm text-sm text-navy-premium">Singularização + 7 camadas de revisão</span>
             </li>
             <li class="flex items-start gap-3">
@@ -2068,7 +2244,7 @@
             </button>
             <div class="accordion-content px-6">
               <p class="font-dm text-sm text-navy-premium/80 leading-relaxed">
-                O Curso Disserta 15D inclui o Método V.O.E. completo em vídeo (7 módulos do Tronco Comum + Trilha Disserta 15D com 15 dias em 5 estágios), Revisão Bibliográfica como aula dedicada, Kit V.O.E. Dissertação Aprovada com 100+ prompts, 3 Masterclasses bônus (Resposta aos Revisores, Apresentação Acadêmica, Feedback do Orientador) e acesso ao grupo WhatsApp exclusivo dos alunos. Tudo num único acesso.
+                O Curso Disserta 15D inclui o Método V.O.E. completo em vídeo (7 módulos aplicados à dissertação, com 15 dias de execução em 5 estágios), Revisão Bibliográfica como aula dedicada, Kit V.O.E. Dissertação Aprovada com 100+ prompts e acesso ao grupo WhatsApp exclusivo dos alunos. Tudo num único acesso.
               </p>
             </div>
           </div>
@@ -2081,7 +2257,7 @@
             </button>
             <div class="accordion-content px-6">
               <p class="font-dm text-sm text-navy-premium/80 leading-relaxed">
-                O Kit é a ferramenta: prompts organizados em trilha para produzir cada capítulo. O Curso é o sistema de pensamento: ensina como pensar enquanto usa os prompts, inclui a Revisão Bibliográfica (que o Kit não cobre), as 3 Masterclasses e a Trilha Disserta 15D com 5 estágios de execução. O Kit está incluso no Curso.
+                O Kit é a ferramenta: prompts organizados para produzir cada capítulo. O Curso é o sistema de pensamento: ensina como pensar enquanto usa os prompts, inclui a Revisão Bibliográfica (que o Kit não cobre) e o programa Disserta 15D com 15 dias de execução em 5 estágios. O Kit está incluso no Curso.
               </p>
             </div>
           </div>
@@ -2120,7 +2296,7 @@
             </button>
             <div class="accordion-content px-6">
               <p class="font-dm text-sm text-navy-premium/80 leading-relaxed">
-                O nome "Disserta 15D" (15 Dias) indica o tempo de execução da dissertação, não o tempo para assistir às aulas. A Trilha tem 15 dias em 5 estágios, com aulas de 3 a 5 minutos cada. O Tronco Comum (7 módulos) pode ser consumido em 4 a 6 horas totais. O ritmo é seu, e o acesso não expira.
+                O nome "Disserta 15D" (15 Dias) indica o tempo de execução da dissertação, não o tempo para assistir às aulas. São 15 dias em 5 estágios, com aulas de 3 a 5 minutos cada. Os 7 módulos do Método V.O.E. podem ser consumidos em 4 a 6 horas totais. O ritmo é seu, e o acesso não expira.
               </p>
             </div>
           </div>
@@ -2247,19 +2423,7 @@
       }
     }
 
-    // VSL player: click placeholder to load YouTube iframe
-    (function() {
-      const placeholder = document.getElementById('vsl-placeholder');
-      const iframe = document.getElementById('vsl-player');
-      if (!placeholder || !iframe) return;
-      placeholder.addEventListener('click', function() {
-        const src = iframe.getAttribute('data-src');
-        if (src && src.indexOf('VIDEO_ID') === -1) {
-          iframe.src = src + '&autoplay=1';
-          placeholder.style.display = 'none';
-        }
-      });
-    })();
+    // VSL player: YouTube embed carregado diretamente (sem placeholder)
 
     // ========================================
     // SCROLL ANIMATIONS (IntersectionObserver)
