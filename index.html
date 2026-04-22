@@ -98,8 +98,10 @@
 
   <style>
     /* Base */
-    html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; color: #0E1A26; }
+
+    /* Scroll anchor: deixa espaco pro h2 "Escolha sua opcao" ficar visivel acima dos cards */
+    #pricing-cards { scroll-margin-top: 120px; }
 
     /* Accordion */
     .accordion-content {
@@ -583,7 +585,7 @@
 
       <!-- Logo do Curso -->
       <div class="flex items-center justify-center mb-8" data-animate="fade-up" data-delay="150">
-        <img src="img/fotos/disserta-15d-logo-retangular-claro.webp" alt="Logo Curso Disserta 15D - Método V.O.E." class="h-20 sm:h-28 md:h-36 w-auto" loading="eager">
+        <img width="600" height="320" src="img/fotos/disserta-15d-logo-retangular-claro.webp" alt="Logo Curso Disserta 15D - Método V.O.E." class="h-20 sm:h-28 md:h-36 w-auto" loading="eager">
       </div>
 
       <!-- Layout 2 colunas: Headline + Vídeo -->
@@ -617,10 +619,10 @@
 
       <!-- CTA -->
       <div class="text-center mb-8" data-animate="fade-up" data-delay="550">
-        <a href="#pricing" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px] shadow-lg">
+        <a href="#pricing-cards" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px] shadow-lg">
           Quero o Curso Disserta 15D por R$397
         </a>
-        <p class="font-dm text-sm text-navy-academico mt-3 italic">ou 12x R$41,06</p>
+        <p class="font-dm text-sm text-navy-academico mt-3 italic">ou 12x</p>
       </div>
 
       <!-- Selos segurança -->
@@ -728,7 +730,7 @@
           <svg class="w-6 h-6 text-dourado" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
           <div class="flex -space-x-2">
             <div class="w-8 h-8 rounded-full bg-navy-academico border-2 border-navy-premium overflow-hidden">
-              <img src="img/fotos/nathalia-profissional.webp" alt="" class="w-full h-full object-cover">
+              <img width="1080" height="1350" src="img/fotos/nathalia-profissional.webp" alt="" class="w-full h-full object-cover">
             </div>
             <div class="w-8 h-8 rounded-full bg-dourado/30 border-2 border-navy-premium flex items-center justify-center">
               <span class="text-xs text-champagne font-bold">J</span>
@@ -753,17 +755,17 @@
         O método funciona com a IA que você já usa.
       </p>
       <div class="logo-carousel flex items-center justify-start sm:justify-center gap-8 sm:gap-10 md:gap-12 pb-2">
-        <img src="img/logos-ia/chatgpt-ai.webp" alt="ChatGPT" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/claude-ai.webp" alt="Claude" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/gemini-ai.webp" alt="Gemini" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/scispace-ai.webp" alt="SciSpace" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/eliciti-ai.webp" alt="Elicit" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/perplexity-ai.webp" alt="Perplexity" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/grok-ai.webp" alt="Grok" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/grammarly-ai.webp" alt="Grammarly" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/jenni-ai.webp" alt="Jenni AI" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/manus-ai.webp" alt="Manus AI" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
-        <img src="img/logos-ia/clarice-ai.webp" alt="Clarice AI" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/chatgpt-ai.webp" alt="ChatGPT" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/claude-ai.webp" alt="Claude" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/gemini-ai.webp" alt="Gemini" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/scispace-ai.webp" alt="SciSpace" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/eliciti-ai.webp" alt="Elicit" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/perplexity-ai.webp" alt="Perplexity" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="500" height="500" src="img/logos-ia/grok-ai.webp" alt="Grok" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/grammarly-ai.webp" alt="Grammarly" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/jenni-ai.webp" alt="Jenni AI" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/manus-ai.webp" alt="Manus AI" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
+        <img width="120" height="120" src="img/logos-ia/clarice-ai.webp" alt="Clarice AI" class="logo-ia h-20 sm:h-24 w-auto flex-shrink-0" loading="lazy">
       </div>
     </div>
   </section>
@@ -776,7 +778,7 @@
       <div class="grid md:grid-cols-2 gap-10 md:gap-16 items-start">
         <!-- Foto profissional -->
         <div class="order-1 md:order-none">
-          <img src="img/fotos/nathalia-profissional.webp" alt="Dra. Nathalia Cavichiolli - Revisora Springer Nature e criadora do Método V.O.E." class="w-full aspect-[3/4] object-cover object-top rounded-xl" loading="lazy">
+          <img width="1080" height="1350" src="img/fotos/nathalia-profissional.webp" alt="Dra. Nathalia Cavichiolli - Revisora Springer Nature e criadora do Método V.O.E." class="w-full aspect-[3/4] object-cover object-top rounded-xl" loading="lazy">
         </div>
 
         <!-- Conteúdo -->
@@ -812,6 +814,14 @@
             </p>
             <footer class="mt-3 font-montserrat font-semibold text-sm text-navy-academico">
               Dra. Nathalia Cavichiolli
+      <div class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 font-dm text-xs" data-legal-links="1">
+        <a href="/termos" class="text-dourado hover:text-champagne transition-colors duration-300">Termos de Uso</a>
+        <span class="text-dourado/30">|</span>
+        <a href="/privacidade" class="text-dourado hover:text-champagne transition-colors duration-300">Política de Privacidade</a>
+        <span class="text-dourado/30">|</span>
+        <a href="/cookies" class="text-dourado hover:text-champagne transition-colors duration-300">Política de Cookies</a>
+      </div>
+    
             </footer>
           </blockquote>
         </div>
@@ -839,7 +849,7 @@
         <!-- Card SciELO -->
         <div class="glass-dark rounded-xl p-6">
           <div class="mb-4">
-            <img src="img/logos-institucionais/scielo.webp" alt="Logo SciELO" class="h-10 w-auto object-contain" loading="lazy">
+            <img width="120" height="120" src="img/logos-institucionais/scielo.webp" alt="Logo SciELO" class="h-10 w-auto object-contain" loading="lazy">
           </div>
           <p class="font-dm text-sm text-champagne leading-relaxed italic mb-4">
             "O uso de ferramentas e recursos que auxiliam os autores na elaboração de seus manuscritos e recomendável, desde que mantida a integridade e a responsabilidade dos autores."
@@ -850,7 +860,7 @@
         <!-- Card COPE -->
         <div class="glass-dark rounded-xl p-6">
           <div class="mb-4">
-            <img src="img/logos-institucionais/cope.webp" alt="Logo COPE - Committee on Publication Ethics" class="h-10 w-auto object-contain" loading="lazy">
+            <img width="200" height="150" src="img/logos-institucionais/cope.webp" alt="Logo COPE - Committee on Publication Ethics" class="h-10 w-auto object-contain" loading="lazy">
           </div>
           <p class="font-dm text-sm text-champagne leading-relaxed italic mb-4">
             "AI tools, such as ChatGPT, cannot be listed as an author of a paper. Os autores humanos permanecem totalmente responsáveis por todo o conteúdo, inclusive o gerado com apoio de IA."
@@ -861,7 +871,7 @@
         <!-- Card Nature -->
         <div class="glass-dark rounded-xl p-6">
           <div class="mb-4">
-            <img src="img/logos-institucionais/logonature.webp" alt="Logo Nature / Springer Nature" class="h-10 w-auto object-contain" loading="lazy">
+            <img width="625" height="270" src="img/logos-institucionais/logonature.webp" alt="Logo Nature / Springer Nature" class="h-10 w-auto object-contain" loading="lazy">
           </div>
           <p class="font-dm text-sm text-champagne leading-relaxed italic mb-4">
             "Large Language Models (LLMs), such as ChatGPT, do not currently satisfy our authorship criteria. Use of an LLM should be properly documented in the Methods section."
@@ -872,7 +882,7 @@
         <!-- Card FAPESP -->
         <div class="glass-dark rounded-xl p-6">
           <div class="mb-4">
-            <img src="img/logos-institucionais/fapesp-img.webp" alt="Logo FAPESP" class="h-10 w-auto object-contain" loading="lazy">
+            <img width="1537" height="711" src="img/logos-institucionais/fapesp-img.webp" alt="Logo FAPESP" class="h-10 w-auto object-contain" loading="lazy">
           </div>
           <p class="font-dm text-sm text-champagne leading-relaxed italic mb-4">
             "Periódicos científicos não permitem que ferramentas de IA sejam consideradas autoras de trabalhos acadêmicos. O humano é sempre o responsável pelos resultados científicos."
@@ -1308,7 +1318,7 @@
           O Curso Disserta 15D é esse sistema.
         </p>
 
-        <a href="#pricing" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px] mb-6">
+        <a href="#pricing-cards" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px] mb-6">
           Quero o Curso Disserta 15D por R$397
         </a>
 
@@ -1337,7 +1347,7 @@
           </picture>
           <h2 class="font-cormorant font-bold text-3xl sm:text-4xl text-navy-premium mb-1 text-center lg:text-left">Curso Disserta 15D</h2>
           <p class="font-cormorant italic text-lg text-navy-academico mb-4 text-center lg:text-left">Dissertação de Mestrado em 15 Dias</p>
-          <p class="font-montserrat font-semibold text-2xl text-navy-premium mb-1 text-center lg:text-left">R$397 <span class="font-dm text-sm font-normal text-navy-premium/60">(ou 12x R$41,06)</span></p>
+          <p class="font-montserrat font-semibold text-2xl text-navy-premium mb-1 text-center lg:text-left">R$397 <span class="font-dm text-sm font-normal text-navy-premium/60">(ou 12x)</span></p>
         </div>
 
         <!-- Coluna direita: Descrição + Blocos + Checks (60%) -->
@@ -1400,7 +1410,7 @@
         <h2 class="font-cormorant font-bold text-2xl sm:text-3xl text-navy-premium mb-2">Método V.O.E. Completo</h2>
         <p class="font-cormorant italic text-base text-navy-academico mb-4">A biblioteca inteira da Dra. Nathalia num único acesso</p>
         <p class="font-dm text-base text-navy-premium/60 mb-1">por <span class="font-montserrat font-semibold text-2xl text-navy-premium">R$1.297</span></p>
-        <p class="font-dm text-sm text-navy-premium/50 mb-6">ou 12x de R$129,07</p>
+        <p class="font-dm text-sm text-navy-premium/50 mb-6">ou em até 12x no cartão</p>
 
         <div class="mb-8">
           <img src="img/fotos/metodo-voe-completo-mockup.webp" alt="Mockup do Método V.O.E. Completo - 4 Kits, 4 Cursos e 5 ebooks especializados" class="w-full max-w-lg mx-auto rounded-xl" width="800" height="500" loading="lazy">
@@ -1429,7 +1439,7 @@
           </div>
         </div>
 
-        <a href="#pricing" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px]">
+        <a href="#pricing-cards" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px]">
           Quero o Método V.O.E. Completo
         </a>
       </div>
@@ -1776,7 +1786,7 @@
 
         <!-- Fechamento -->
         <p class="font-dm text-base text-navy-premium text-center leading-relaxed max-w-2xl mx-auto">
-          Tudo isso por R$397 (12x R$41,06). Menos do que uma hora de orientação individual, com um sistema que você aplica quantas vezes precisar, em qualquer texto acadêmico, sem custo adicional.
+          Tudo isso por R$397 (12x). Menos do que uma hora de orientação individual, com um sistema que você aplica quantas vezes precisar, em qualquer texto acadêmico, sem custo adicional.
         </p>
       </div>
     </div>
@@ -1905,7 +1915,7 @@
       </h2>
 
       <div class="max-w-2xl mx-auto mb-12">
-        <img src="img/fotos/pesquisadores-grid.webp" alt="Comunidade de pesquisadores que usam o Método V.O.E." class="w-full rounded-xl" loading="lazy">
+        <img width="600" height="600" src="img/fotos/pesquisadores-grid.webp" alt="Comunidade de pesquisadores que usam o Método V.O.E." class="w-full rounded-xl" loading="lazy">
       </div>
 
       <div class="grid md:grid-cols-2 gap-8 md:gap-12">
@@ -2047,7 +2057,7 @@
         </div>
 
         <!-- CTA -->
-        <a href="#pricing" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px]">
+        <a href="#pricing-cards" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px]">
           Quero o Curso Disserta 15D por R$397
         </a>
       </div>
@@ -2063,7 +2073,7 @@
         Escolha sua opção
       </h2>
 
-      <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <div id="pricing-cards" class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         <!-- Card esquerdo: Curso Disserta 15D (essencial) -->
         <div class="glass-light rounded-xl p-8 flex flex-col relative border border-dourado/20">
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -2077,7 +2087,7 @@
             </picture>
           </div>
           <h3 class="font-cormorant font-bold text-xl text-navy-premium mb-0">Curso Disserta 15D</h3>
-          <p class="font-montserrat font-semibold text-3xl text-navy-premium mb-1">R$397 <span class="font-dm text-sm font-normal text-navy-premium/60">(ou 12x R$41,06)</span></p>
+          <p class="font-montserrat font-semibold text-3xl text-navy-premium mb-1">R$397 <span class="font-dm text-sm font-normal text-navy-premium/60">(ou 12x)</span></p>
           <p class="font-dm text-sm text-navy-premium/80 leading-relaxed mb-6">
             O Método V.O.E. completo aplicado à sua dissertação de mestrado.
           </p>
@@ -2103,10 +2113,10 @@
               <span class="font-dm text-sm text-navy-premium">Grupo WhatsApp exclusivo dos alunos</span>
             </li>
           </ul>
-          <a href="https://pay.hotmart.com/X103176954M?off=a842qy5j" class="block text-center bg-dourado text-navy-premium font-montserrat font-semibold text-base px-6 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 min-h-[48px] cta-hover">
+          <a target="_blank" rel="noopener noreferrer" href="https://pay.hotmart.com/X103176954M?off=a842qy5j" data-content-ids="curso-disserta-15d" data-content-name="Curso Disserta 15D" data-content-category="curso" data-value="397.00" class="block text-center bg-dourado text-navy-premium font-montserrat font-semibold text-base px-6 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 min-h-[48px] cta-hover">
             Quero o Curso Disserta 15D por R$397
           </a>
-          <p class="font-dm text-sm text-navy-premium/60 text-center mt-2 italic">ou 12x R$41,06</p>
+          <p class="font-dm text-sm text-navy-premium/60 text-center mt-2 italic">ou 12x</p>
         </div>
 
         <!-- Card direito: Método V.O.E. Completo (recomendado) -->
@@ -2119,7 +2129,7 @@
             <img src="img/fotos/metodo-voe-completo-mockup.webp" alt="Mockup Método V.O.E. Completo - 4 Kits, 4 Cursos e 5 ebooks especializados" class="w-full max-w-[280px] mx-auto object-contain" width="800" height="500" loading="lazy">
           </div>
           <h3 class="font-cormorant font-bold text-xl text-navy-premium mb-1">Método V.O.E. Completo</h3>
-          <p class="font-montserrat font-semibold text-3xl text-navy-premium mb-1">R$1.297 <span class="font-dm text-sm font-normal text-navy-premium/60">(ou 12x R$129,07)</span></p>
+          <p class="font-montserrat font-semibold text-3xl text-navy-premium mb-1">R$1.297 <span class="font-dm text-sm font-normal text-navy-premium/60">(ou 12x)</span></p>
           <p class="font-dm text-sm text-navy-premium/80 leading-relaxed mb-6">
             Tudo do Curso Disserta 15D, mais todos os outros cursos e materiais:
           </p>
@@ -2145,17 +2155,17 @@
               <span class="font-dm text-sm text-navy-premium">Acesso imediato a todos os materiais</span>
             </li>
           </ul>
-          <a href="https://pay.hotmart.com/U105437579C?off=ayr8pahn" class="block text-center bg-navy-academico text-white font-montserrat font-semibold text-base px-6 py-4 rounded-lg hover:bg-navy-escuro transition-colors duration-300 min-h-[48px]">
+          <a target="_blank" rel="noopener noreferrer" href="https://pay.hotmart.com/U105437579C?off=ayr8pahn" data-content-ids="metodo-voe-completo" data-content-name="Metodo V.O.E. Completo" data-content-category="metodo-completo" data-value="1297.00" class="block text-center bg-navy-academico text-white font-montserrat font-semibold text-base px-6 py-4 rounded-lg hover:bg-navy-escuro transition-colors duration-300 min-h-[48px]">
             Quero o Método V.O.E. Completo
           </a>
-          <p class="font-dm text-sm text-navy-premium/60 text-center mt-2 italic">ou 12x R$129,07</p>
+          <p class="font-dm text-sm text-navy-premium/60 text-center mt-2 italic">ou 12x</p>
         </div>
       </div>
 
       <!-- Meios de pagamento -->
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10 max-w-4xl mx-auto">
-        <img src="img/pagamento/meios-pagamento-1.webp" alt="Meios de pagamento aceitos - cartao, boleto, Pix" class="h-8 sm:h-10 w-auto object-contain" loading="lazy">
-        <img src="img/pagamento/meios-pagamento-2.webp" alt="Bandeiras de cartao aceitas - Visa, Mastercard, Elo, Amex" class="h-8 sm:h-10 w-auto object-contain" loading="lazy">
+        <img width="434" height="48" src="img/pagamento/meios-pagamento-1.webp" alt="Meios de pagamento aceitos - cartao, boleto, Pix" class="h-8 sm:h-10 w-auto object-contain" loading="lazy">
+        <img width="403" height="40" src="img/pagamento/meios-pagamento-2.webp" alt="Bandeiras de cartao aceitas - Visa, Mastercard, Elo, Amex" class="h-8 sm:h-10 w-auto object-contain" loading="lazy">
       </div>
       <p class="font-dm text-sm text-navy-premium/50 text-center mt-3">Pagamento seguro via Hotmart. Cartao, boleto ou Pix.</p>
     </div>
@@ -2321,7 +2331,7 @@
           A dissertação não vai se escrever sozinha. Mas com o método certo, ela para de ser o problema que você adia.
         </p>
 
-        <a href="#pricing" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-10 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px] mb-8">
+        <a href="#pricing-cards" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-10 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px] mb-8">
           Quero o Curso Disserta 15D por R$397
         </a>
 
@@ -2373,14 +2383,16 @@
 
         <!-- Links legais -->
         <div class="flex items-center justify-center gap-6 mb-8">
-          <a href="#" class="font-dm text-xs text-dourado hover:text-champagne transition-colors duration-300">Termos de Uso</a>
+          <a href="/termos" class="font-dm text-xs text-dourado hover:text-champagne transition-colors duration-300">Termos de Uso</a>
           <span class="text-champagne/30">|</span>
-          <a href="#" class="font-dm text-xs text-dourado hover:text-champagne transition-colors duration-300">Política de Privacidade</a>
+          <a href="/privacidade" class="font-dm text-xs text-dourado hover:text-champagne transition-colors duration-300">Política de Privacidade</a>
+          <span class="text-dourado/30">|</span>
+          <a href="/cookies" class="font-dm text-xs text-dourado hover:text-champagne transition-colors duration-300">Política de Cookies</a>
         </div>
 
         <!-- Logo Método V.O.E. + tagline -->
         <div class="text-center">
-          <img src="img/fotos/metodo-voe-logo-retangular-claro.webp" alt="Logo Método V.O.E." class="h-10 sm:h-12 w-auto mx-auto mb-4" loading="lazy">
+          <img width="600" height="250" src="img/fotos/metodo-voe-logo-retangular-claro.webp" alt="Logo Método V.O.E." class="h-10 sm:h-12 w-auto mx-auto mb-4" loading="lazy">
           <p class="font-cormorant italic text-sm text-dourado tracking-wider">
             VOE ALTO. VOE LEVE.
           </p>
@@ -2393,7 +2405,7 @@
   <!-- STICKY CTA MOBILE -->
   <!-- ============================================================ -->
   <div id="stickyCta" class="sticky-cta fixed bottom-0 left-0 right-0 glass-sticky p-3 z-50 md:hidden">
-    <a href="#pricing" class="block text-center bg-dourado text-navy-premium font-montserrat font-semibold text-sm px-4 py-3 rounded-lg hover:bg-champagne transition-colors duration-300 min-h-[44px]">
+    <a href="#pricing-cards" class="block text-center bg-dourado text-navy-premium font-montserrat font-semibold text-sm px-4 py-3 rounded-lg hover:bg-champagne transition-colors duration-300 min-h-[44px]">
       Quero o Curso Disserta 15D por R$397
     </a>
   </div>
@@ -2792,6 +2804,66 @@
           if (value) url.searchParams.set(param, value);
         });
         link.href = url.toString();
+      });
+
+      // InitiateCheckout tracking (Meta Pixel)
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+        if (href.indexOf('pay.hotmart.com') === -1) return;
+        if (typeof fbq === 'undefined') return;
+
+        fbq('track', 'InitiateCheckout', {
+          content_ids: [link.dataset.contentIds || 'curso-disserta-15d'],
+          content_name: link.dataset.contentName || 'Curso Disserta 15D',
+          content_category: link.dataset.contentCategory || 'curso',
+          value: parseFloat(link.dataset.value || '397.00'),
+          currency: 'BRL'
+        });
+      });
+
+      // Custom smooth scroll (substitui CSS scroll-behavior: smooth,
+      // que falha em distancias grandes devido a limite de duracao do Chrome)
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        if (!href || href === '#' || href.length < 2) return;
+        var target;
+        try { target = document.querySelector(href); } catch (err) { return; }
+        if (!target) return;
+        e.preventDefault();
+        var startY = window.scrollY;
+        var scrollMarginTop = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+        var duration = 2000;
+        var t0 = performance.now();
+        var cancelled = false;
+        var onUserScroll = function() { cancelled = true; };
+        // Cancelar apenas em wheel (desktop). Em mobile, touchmove e disparado
+        // por toques passivos e momentum scroll — causa falsos cancelamentos.
+        window.addEventListener('wheel', onUserScroll, { once: true, passive: true });
+        function cleanup() {
+          window.removeEventListener('wheel', onUserScroll);
+        }
+        function animate(now) {
+          if (cancelled) { cleanup(); return; }
+          var p = Math.min((now - t0) / duration, 1);
+          var eased = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          // Recalcular endY a cada frame: segue o alvo mesmo com layout shift
+          // (imgs/fontes carregando durante a animacao podem mover o target)
+          var currentEndY = target.getBoundingClientRect().top + window.scrollY - scrollMarginTop;
+          window.scrollTo(0, startY + (currentEndY - startY) * eased);
+          if (p < 1) setTimeout(function() { animate(performance.now()); }, 16);
+          else {
+            // Frame final: garantir posicao exata (pode ter havido shift no ultimo tick)
+            var finalEndY = target.getBoundingClientRect().top + window.scrollY - scrollMarginTop;
+            window.scrollTo(0, finalEndY);
+            cleanup();
+            history.replaceState(null, '', href);
+          }
+        }
+        setTimeout(function() { animate(performance.now()); }, 0);
       });
     })();
   </script>

@@ -97,7 +97,6 @@
   </script>
 
   <style>
-    html { scroll-behavior: smooth; }
     body { font-family: 'DM Sans', sans-serif; color: #0E1A26; }
 
     .cta-hover {
@@ -176,10 +175,10 @@
         O Curso Disserta 15D é o Método V.O.E. completo aplicado à sua dissertação: programa em vídeo com 15 dias de execução, Kit de prompts (que você já garantiu) integrado ao método e Revisão Bibliográfica como aula dedicada. Condição exclusiva para quem acabou de entrar, com R$100 de desconto.
       </p>
 
-      <a href="https://pay.hotmart.com/X103176954M?off=2unxji09" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px] cta-hover">
+      <a target="_blank" rel="noopener noreferrer" href="https://pay.hotmart.com/X103176954M?off=2unxji09" data-content-ids="curso-disserta-15d-upsell-com-bonus" data-content-name="Curso Disserta 15D (upsell com bonus)" data-content-category="curso" data-value="297.00" class="inline-block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 w-full sm:w-auto min-h-[48px] cta-hover">
         Sim, quero o Curso Disserta 15D com desconto por R$297
       </a>
-      <p class="font-dm text-sm text-champagne/60 mt-3 italic">ou 12x R$30,71</p>
+      <p class="font-dm text-sm text-champagne/60 mt-3 italic">ou 12x</p>
     </div>
   </section>
 
@@ -281,7 +280,7 @@
 
         <p class="font-dm text-base text-navy-premium/50 line-through mb-1">De R$397</p>
         <p class="font-montserrat font-bold text-4xl text-navy-premium mb-1">R$297</p>
-        <p class="font-dm text-sm text-navy-premium/60 mb-6 italic">ou 12x R$30,71</p>
+        <p class="font-dm text-sm text-navy-premium/60 mb-6 italic">ou 12x</p>
 
         <p class="font-dm text-sm text-green-700 font-semibold mb-6">Você economiza R$100 em relação ao preço da página de vendas.</p>
 
@@ -340,7 +339,7 @@
   <section class="bg-navy-premium py-12 md:py-16">
     <div class="max-w-lg mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <!-- Botão primário: aceitar -->
-      <a href="https://pay.hotmart.com/X103176954M?off=2unxji09" class="block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 min-h-[48px] cta-hover mb-4">
+      <a target="_blank" rel="noopener noreferrer" href="https://pay.hotmart.com/X103176954M?off=2unxji09" data-content-ids="curso-disserta-15d-upsell-com-bonus" data-content-name="Curso Disserta 15D (upsell com bonus)" data-content-category="curso" data-value="297.00" class="block bg-dourado text-navy-premium font-montserrat font-semibold text-base sm:text-lg px-8 py-4 rounded-lg hover:bg-champagne transition-colors duration-300 min-h-[48px] cta-hover mb-4">
         Sim, quero o Curso Disserta 15D com desconto por R$297
       </a>
 
@@ -370,10 +369,79 @@
       <p class="font-dm text-xs text-champagne/60">CNPJ: 51.397.398/0001-82</p>
       <p class="font-dm text-xs text-champagne/60 mt-1">&copy; 2026 Sousa e Cavichiolli Treinamentos LTDA. Todos os direitos reservados.</p>
       <div class="mt-4">
-        <img src="../img/fotos/metodo-voe-logo-retangular-claro.webp" alt="Logo Método V.O.E." class="h-8 w-auto mx-auto" loading="lazy">
+        <img width="600" height="250" src="../img/fotos/metodo-voe-logo-retangular-claro.webp" alt="Logo Método V.O.E." class="h-8 w-auto mx-auto" loading="lazy">
       </div>
     </div>
+      <div class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 font-dm text-xs" data-legal-links="1">
+        <a href="/termos" class="text-dourado hover:text-champagne transition-colors duration-300">Termos de Uso</a>
+        <span class="text-dourado/30">|</span>
+        <a href="/privacidade" class="text-dourado hover:text-champagne transition-colors duration-300">Política de Privacidade</a>
+        <span class="text-dourado/30">|</span>
+        <a href="/cookies" class="text-dourado hover:text-champagne transition-colors duration-300">Política de Cookies</a>
+      </div>
+    
   </footer>
+
+  <!-- InitiateCheckout tracking (Meta Pixel) -->
+  <script>
+    (function() {
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a');
+        if (!link) return;
+        var href = link.getAttribute('href') || '';
+        if (href.indexOf('pay.hotmart.com') === -1) return;
+        if (typeof fbq === 'undefined') return;
+
+        fbq('track', 'InitiateCheckout', {
+          content_ids: [link.dataset.contentIds || 'curso-disserta-15d-upsell-com-bonus'],
+          content_name: link.dataset.contentName || 'Curso Disserta 15D (upsell com bonus)',
+          content_category: link.dataset.contentCategory || 'curso',
+          value: parseFloat(link.dataset.value || '297.00'),
+          currency: 'BRL'
+        });
+      });
+
+      // Custom smooth scroll (substitui CSS scroll-behavior: smooth)
+      document.addEventListener('click', function(e) {
+        var link = e.target.closest('a[href^="#"]');
+        if (!link) return;
+        var href = link.getAttribute('href');
+        if (!href || href === '#' || href.length < 2) return;
+        var target;
+        try { target = document.querySelector(href); } catch (err) { return; }
+        if (!target) return;
+        e.preventDefault();
+        var startY = window.scrollY;
+        var scrollMarginTop = parseFloat(getComputedStyle(target).scrollMarginTop) || 0;
+        var duration = 2000;
+        var t0 = performance.now();
+        var cancelled = false;
+        var onUserScroll = function() { cancelled = true; };
+        // Cancelar apenas em wheel (desktop). Em mobile, touchmove e disparado
+        // por toques passivos e momentum scroll — causa falsos cancelamentos.
+        window.addEventListener('wheel', onUserScroll, { once: true, passive: true });
+        function cleanup() {
+          window.removeEventListener('wheel', onUserScroll);
+        }
+        function animate(now) {
+          if (cancelled) { cleanup(); return; }
+          var p = Math.min((now - t0) / duration, 1);
+          var eased = p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;
+          // Recalcular endY a cada frame: segue o alvo mesmo com layout shift
+          var currentEndY = target.getBoundingClientRect().top + window.scrollY - scrollMarginTop;
+          window.scrollTo(0, startY + (currentEndY - startY) * eased);
+          if (p < 1) setTimeout(function() { animate(performance.now()); }, 16);
+          else {
+            var finalEndY = target.getBoundingClientRect().top + window.scrollY - scrollMarginTop;
+            window.scrollTo(0, finalEndY);
+            cleanup();
+            history.replaceState(null, '', href);
+          }
+        }
+        setTimeout(function() { animate(performance.now()); }, 0);
+      });
+    })();
+  </script>
 
 </body>
 </html>

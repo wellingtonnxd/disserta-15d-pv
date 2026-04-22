@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+<meta name="description" content="Politica de Privacidade — Curso Disserta 15D da Souza e Cavichiolli Treinamentos Ltda, operadora do Curso Disserta 15D.">
+<meta name="robots" content="noindex, follow">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politica de Privacidade — Curso Disserta 15D</title>
+  <!-- Meta Pixel — nath_disserta_15d_5037 -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1348224717095037');
+    fbq('init', '433859362783001');
+    fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {
+      content_name: 'Curso Disserta 15D',
+      content_type: 'product',
+      value: 397.00,
+      currency: 'BRL'
+    });
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1348224717095037&ev=PageView&noscript=1"/></noscript>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=433859362783001&ev=PageView&noscript=1"/></noscript>
+
+  <!-- OpenPanel Analytics — Curso Disserta 15D -->
+  <script>
+    window.op = {
+      q: [["init", {
+        apiUrl: 'https://openpanel.doutoranathalia.com.br/api',
+        clientId: '34cc1fec-672b-4abe-b9fd-0d3c959635f9',
+        trackScreenViews: true,
+        trackOutgoingLinks: true,
+        trackAttributes: true,
+      }]]
+    };
+  </script>
+  <script src="https://openpanel.dev/op1.js" defer async></script>
+
+  <!-- Google tag (gtag.js) — Curso Disserta 15D -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-41TLQC0RW9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-41TLQC0RW9');
+  </script>
+
+  <!-- Microsoft Clarity — Curso Disserta 15D -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wcsfa5jne6");
+  </script>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="img/fotos/favicon.webp">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@400;500&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'navy-premium': '#0E1A26',
+            'navy-academico': '#1E2D3D',
+            'navy-claro': '#E3E9F0',
+            'navy-escuro': '#121F2A',
+            'ametista': '#4A1F8C',
+            'dourado': '#C9A96E',
+            'champagne': '#E6D5B0',
+            'branco-frio': '#F5F3FF',
+            'neutral-bg': '#F9FAFB',
+          },
+          fontFamily: {
+            'cormorant': ['"Cormorant Garamond"', 'serif'],
+            'montserrat': ['Montserrat', 'sans-serif'],
+            'dm': ['"DM Sans"', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    /* Base */
+    body { font-family: 'DM Sans', sans-serif; color: #0E1A26; }
+
+    /* Scroll anchor: deixa espaco pro h2 "Escolha sua opcao" ficar visivel acima dos cards */
+    #pricing-cards { scroll-margin-top: 120px; }
+
+    /* Accordion */
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 300ms ease, padding 300ms ease;
+    }
+    .accordion-content.open {
+      max-height: 800px;
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+    }
+    .accordion-toggle svg {
+      transition: transform 300ms ease;
+    }
+    .accordion-toggle.active svg {
+      transform: rotate(180deg);
+    }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      transform: translateY(100%);
+      transition: transform 400ms ease;
+    }
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+
+    /* Placeholder images */
+    .placeholder-img {
+      background: linear-gradient(135deg, #1E2D3D 0%, #0E1A26 70%, #C9A96E 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #E6D5B0;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.875rem;
+      text-align: center;
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+
+    /* Logo IA grayscale */
+    .logo-ia {
+      filter: grayscale(1);
+      opacity: 0.7;
+      transition: filter 300ms ease, opacity 300ms ease;
+    }
+    .logo-ia:hover {
+      filter: grayscale(0);
+      opacity: 1;
+    }
+
+    /* ==========================================
+       SCROLL ANIMATIONS + MOTION DESIGN
+       ========================================== */
+
+    /* Reading progress bar */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #C9A96E, #E6D5B0);
+      z-index: 9999;
+      width: 0%;
+      will-change: width;
+    }
+
+    /* Animation base: inline styles are set by JS to avoid Tailwind CDN cascade conflicts.
+       Only hover/keyframe effects live here. */
+
+    /* CTA button hover: lift + glow */
+    .cta-hover {
+      transition: transform 200ms ease-out, box-shadow 200ms ease-out, background-color 300ms ease !important;
+    }
+    .cta-hover:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 25px rgba(201, 169, 110, 0.4) !important;
+    }
+    .cta-hover:active {
+      transform: translateY(0) scale(0.98) !important;
+    }
+
+    /* Card hover lift */
+    .card-lift {
+      transition: transform 250ms ease-out, box-shadow 250ms ease-out !important;
+    }
+    .card-lift:hover {
+      transform: translateY(-4px) !important;
+      box-shadow: 0 12px 40px rgba(14, 26, 38, 0.12) !important;
+    }
+
+    /* Heading underline reveal */
+    .heading-line::after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(90deg, #C9A96E, transparent);
+      margin-top: 12px;
+      transition: width 800ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .heading-line.is-visible::after {
+      width: 80px !important;
+    }
+    .heading-line.text-center::after,
+    .heading-line[class*="text-center"]::after {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Decorative gradient orbs */
+    .gradient-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Logo marquee */
+    @keyframes logoMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .logo-marquee-track {
+      display: flex;
+      width: max-content;
+      animation: logoMarquee 30s linear infinite;
+    }
+    .logo-marquee-track:hover {
+      animation-play-state: paused;
+    }
+
+    /* Subtle float for decorative elements */
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .float-slow { animation: subtleFloat 4s ease-in-out infinite; }
+
+    /* Pricing card glow pulse */
+    @keyframes borderGlow {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(201, 169, 110, 0); }
+      50% { box-shadow: 0 0 20px 2px rgba(201, 169, 110, 0.15); }
+    }
+    .glow-pulse { animation: borderGlow 3s ease-in-out infinite; }
+
+    /* ==========================================
+       MODERN ENHANCEMENTS
+       ========================================== */
+
+    /* 1. Animated mesh gradient hero background */
+    @keyframes meshShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+    .mesh-hero {
+      background: linear-gradient(-45deg, #F5F3FF 0%, #E3E9F0 25%, #F5F3FF 50%, #f0ebe0 75%, #F5F3FF 100%);
+      background-size: 400% 400%;
+      animation: meshShift 20s ease infinite;
+    }
+
+    /* 2. Noise texture overlay */
+    .noise::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.03;
+      pointer-events: none;
+      z-index: 1;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* 3. Wave section dividers */
+    .wave-divider {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 60px;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .wave-divider-top { top: -1px; }
+    .wave-divider-bottom { bottom: -1px; }
+    .wave-divider svg {
+      display: block;
+      width: 100%;
+      height: 60px;
+    }
+
+    /* 4. Animated counters */
+    .counter-value {
+      font-variant-numeric: tabular-nums;
+      display: inline-block;
+    }
+
+    /* 5. Horizontal scroll testimonials */
+    .scroll-snap-x {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      gap: 1rem;
+      padding-bottom: 1rem;
+    }
+    .scroll-snap-x::-webkit-scrollbar { display: none; }
+    .scroll-snap-x > * {
+      scroll-snap-align: start;
+      flex: 0 0 280px;
+    }
+    @media (min-width: 640px) {
+      .scroll-snap-x > * { flex: 0 0 320px; }
+    }
+
+    /* 5b. Marquee infinita (mobile e desktop) */
+    .marquee-mobile {
+      overflow: hidden;
+      mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to right, transparent 0, black 5%, black 95%, transparent 100%);
+    }
+    .marquee-mobile .marquee-track {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      animation: marquee-scroll 32s linear infinite;
+    }
+    .marquee-mobile .marquee-track > * {
+      flex: 0 0 280px;
+    }
+    .marquee-mobile .marquee-track:hover {
+      animation-play-state: paused;
+    }
+    @media (min-width: 640px) {
+      .marquee-mobile .marquee-track > * { flex: 0 0 320px; }
+    }
+    @media (min-width: 1024px) {
+      .marquee-mobile .marquee-track {
+        gap: 1.5rem;
+        animation-duration: 48s;
+      }
+      .marquee-mobile .marquee-track > * {
+        flex: 0 0 340px;
+      }
+    }
+    @keyframes marquee-scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .marquee-mobile .marquee-track {
+        animation: none;
+      }
+    }
+
+    /* 6. Section overlap (cards that invade next section) */
+    .overlap-bottom {
+      position: relative;
+      z-index: 2;
+      margin-bottom: -3rem;
+    }
+    .overlap-top {
+      padding-top: 4rem;
+    }
+
+    /* 7. Highlight text (bold accent in headlines) */
+    .text-highlight {
+      color: #C9A96E;
+      font-weight: 700;
+    }
+
+    /* 8. Bento grid */
+    .bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    @media (min-width: 768px) {
+      .bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto;
+      }
+      .bento-grid .bento-hero {
+        grid-column: 1 / -1;
+      }
+    }
+    @media (min-width: 1024px) {
+      .bento-grid {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto auto;
+      }
+      .bento-grid .bento-hero {
+        grid-column: 1 / 3;
+        grid-row: 1 / 3;
+      }
+    }
+
+    /* Reduced motion: respect user preference */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      [data-animate],
+      .stagger-children > * {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+      .heading-line::after {
+        width: 80px !important;
+      }
+      .reading-progress { display: none; }
+    }
+
+    /* Carousel */
+    .logo-carousel {
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    .logo-carousel::-webkit-scrollbar { display: none; }
+
+    /* Selo 3D */
+    .selo-15d {
+      width: 80px;
+      height: 80px;
+      border: 2px solid #C9A96E;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .selo-15d::after {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border: 1px solid #C9A96E;
+      border-radius: 50%;
+    }
+    .selo-15d span {
+      font-size: 1.25rem;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 1.25rem;
+      color: #C9A96E;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ==========================================
+       GLASSMORPHISM SYSTEM
+       ========================================== */
+
+    /* Glass card on dark backgrounds (navy-premium) */
+    .glass-dark {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(14px) saturate(180%);
+      -webkit-backdrop-filter: blur(14px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      transition: background 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+    }
+    .glass-dark:hover {
+      background: rgba(255, 255, 255, 0.10);
+      border-color: rgba(201, 169, 110, 0.4);
+      box-shadow: 0 8px 32px rgba(201, 169, 110, 0.08);
+    }
+
+    /* Glass card on light backgrounds (branco-frio, neutral) */
+    .glass-light {
+      background: rgba(255, 255, 255, 0.55);
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+      border: 1px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 4px 24px rgba(14, 26, 38, 0.06);
+      transition: background 300ms ease, border-color 300ms ease, box-shadow 300ms ease;
+    }
+    .glass-light:hover {
+      background: rgba(255, 255, 255, 0.7);
+      border-color: rgba(201, 169, 110, 0.3);
+      box-shadow: 0 8px 32px rgba(14, 26, 38, 0.1);
+    }
+
+    /* Glass badge/pill (small inline elements) */
+    .glass-badge {
+      background: rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+    /* Glass sticky bar */
+    .glass-sticky {
+      background: rgba(14, 26, 38, 0.85);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-top: 1px solid rgba(201, 169, 110, 0.2);
+    }
+
+    /* Glass blockquote accent */
+    .glass-quote {
+      background: rgba(201, 169, 110, 0.06);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(201, 169, 110, 0.15);
+    }
+
+    /* Glass pricing highlight */
+    .glass-pricing {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px) saturate(160%);
+      -webkit-backdrop-filter: blur(12px) saturate(160%);
+      border: 2px solid rgba(201, 169, 110, 0.5);
+      box-shadow: 0 8px 40px rgba(201, 169, 110, 0.1);
+    }
+
+    /* Fallback for browsers without backdrop-filter */
+    @supports not (backdrop-filter: blur(1px)) {
+      .glass-dark { background: rgba(14, 26, 38, 0.92); border-color: rgba(201, 169, 110, 0.3); }
+      .glass-light { background: rgba(255, 255, 255, 0.9); }
+      .glass-badge { background: rgba(255, 255, 255, 0.8); }
+      .glass-sticky { background: rgba(14, 26, 38, 0.95); }
+      .glass-quote { background: rgba(201, 169, 110, 0.08); }
+      .glass-pricing { background: rgba(255, 255, 255, 0.95); }
+    }
+
+    /* Badge Edition Premium */
+    .badge-premium {
+      display: inline-block;
+      border: 2px solid #C9A96E;
+      padding: 4px 16px;
+      position: relative;
+      border-radius: 2px;
+    }
+    .badge-premium::after {
+      content: '';
+      position: absolute;
+      inset: 3px;
+      border: 1px solid #C9A96E;
+      border-radius: 1px;
+    }
+    .badge-premium span {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      color: #E6D5B0;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+
+  <style>
+    .legal-prose h2 { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.5rem; color: var(--cor-premium); margin-top: 2rem; margin-bottom: 0.75rem; }
+    .legal-prose h3 { font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 1.125rem; color: var(--cor-premium); margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .legal-prose p { margin-bottom: 1rem; line-height: 1.7; }
+    .legal-prose ul { list-style: disc; padding-left: 1.5rem; margin-bottom: 1rem; }
+    .legal-prose ul li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .legal-prose a { color: var(--cor-accent); text-decoration: underline; }
+    .legal-prose a:hover { opacity: 0.8; }
+    .legal-prose code { background: rgba(0,0,0,0.05); padding: 0.125rem 0.375rem; border-radius: 0.25rem; font-family: monospace; font-size: 0.875em; }
+    .legal-prose strong { font-weight: 600; }
+    :root { --cor-premium: #0E1A26; --cor-accent: #C9A96E; }
+  </style>
+</head>
+<body class="bg-branco-frio">
+
+  <header class="border-b border-black/5">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex items-center justify-between gap-4">
+      <a id="btn-voltar" href="/" class="font-montserrat font-semibold text-sm hover:opacity-70 transition-opacity" style="color: var(--cor-premium);">
+        &larr; Voltar para a oferta
+      </a>
+      <span class="font-dm text-xs text-black/50">Curso Disserta 15D</span>
+    </div>
+  </header>
+
+  <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <h1 class="font-cormorant font-bold text-3xl md:text-4xl mb-2" style="color: var(--cor-premium);">Politica de Privacidade — Curso Disserta 15D</h1>
+    <p class="font-dm text-sm text-black/50 mb-8">Ultima atualizacao: 20 de abril de 2026</p>
+
+    <article class="legal-prose font-dm text-base" style="color: var(--cor-premium);">
+      <p>A <strong>Souza &amp; Cavichiolli Treinamentos Ltda</strong> ("Empresa", "nos") leva a privacidade dos visitantes deste site do <strong>Curso Disserta 15D</strong> ("Site") muito a serio. Esta Politica de Privacidade explica quais dados coletamos, como os utilizamos e quais sao os seus direitos, em conformidade com a Lei Geral de Protecao de Dados Pessoais (LGPD, Lei n.&ordm; 13.709/2018).</p>
+
+      <h2>1. Dados que Coletamos</h2>
+
+      <h3>1.1 Dados de navegacao (coletados automaticamente)</h3>
+      <ul>
+        <li>Endereco IP (anonimizado quando possivel)</li>
+        <li>Tipo de navegador e sistema operacional</li>
+        <li>Paginas visitadas e tempo de permanencia</li>
+        <li>Pagina de origem (referrer)</li>
+        <li>Parametros de campanha (UTM, fbclid) armazenados em cookies para atribuicao de venda</li>
+      </ul>
+
+      <h3>1.2 Dados fornecidos voluntariamente</h3>
+      <p>Se voce preencher formularios (contato, pos-compra, autorizacao de depoimento), podemos coletar nome, e-mail, telefone, respostas a perguntas e autorizacoes concedidas.</p>
+
+      <h3>1.3 Dados de compra (processados pela Hotmart)</h3>
+      <p>A venda e processada pela Hotmart. A Empresa recebe da Hotmart nome, e-mail, telefone e produto adquirido, para liberacao de acesso, envio de materiais complementares e acompanhamento do resultado academico.</p>
+
+      <h2>2. Finalidade do Tratamento</h2>
+      <ul>
+        <li>Fornecer e manter o Site e as paginas de vendas</li>
+        <li>Processar pedidos e prestar suporte ao cliente</li>
+        <li>Analisar desempenho do Site e de campanhas de marketing</li>
+        <li>Personalizar anuncios em plataformas de midia paga (remarketing)</li>
+        <li>Responder a contatos e solicitacoes</li>
+        <li>Enviar comunicacoes solicitadas (newsletter, conteudos educacionais)</li>
+        <li>Cumprir obrigacoes legais (ex.: emissao de nota fiscal)</li>
+      </ul>
+
+      <h2>3. Base Legal (LGPD Art. 7&ordm;)</h2>
+      <ul>
+        <li><strong>Consentimento</strong> (I): para formularios voluntarios e newsletter.</li>
+        <li><strong>Execucao de contrato</strong> (V): para liberar acesso e prestar suporte apos compra.</li>
+        <li><strong>Legitimo interesse</strong> (IX): para analise de desempenho, otimizacao e prevencao a fraudes.</li>
+        <li><strong>Obrigacao legal</strong> (II): para emissao fiscal e cumprimento regulatorio.</li>
+      </ul>
+
+      <h2>4. Compartilhamento de Dados</h2>
+      <p>Nao vendemos seus dados. Compartilhamos com os seguintes parceiros operacionais:</p>
+      <ul>
+        <li><strong>Hotmart</strong>: processamento de pagamento, liberacao de acesso, emissao fiscal.</li>
+        <li><strong>Vercel</strong>: hospedagem do Site.</li>
+        <li><strong>Meta Platforms</strong> (Facebook Pixel): medicao de conversao e remarketing. Opt-out: <a href="https://www.facebook.com/settings?tab=ads" target="_blank" rel="noopener noreferrer">facebook.com/settings?tab=ads</a>.</li>
+        <li><strong>Google</strong> (GA4 + Google Ads): analise de trafego e campanha. Opt-out: <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">tools.google.com/dlpage/gaoptout</a>.</li>
+        <li><strong>Microsoft</strong> (Clarity): mapas de calor e gravacao de sessao (inputs sensiveis mascarados). Opt-out: <a href="https://clarity.microsoft.com/terms" target="_blank" rel="noopener noreferrer">clarity.microsoft.com/terms</a>.</li>
+        <li><strong>OpenPanel</strong> (self-hosted, sob controle direto da Empresa em <em>openpanel.doutoranathalia.com.br</em>).</li>
+        <li><strong>Google Workspace</strong> (Forms, Sheets): coleta e armazenamento de respostas de formularios.</li>
+        <li><strong>Autoridades competentes</strong>: quando exigido por lei ou decisao judicial.</li>
+      </ul>
+
+      <h2>5. Cookies</h2>
+      <p>Utilizamos cookies essenciais, de atribuicao (UTM, fbclid), analiticos (GA4, Clarity, OpenPanel) e de marketing (Meta Pixel). Para detalhes e opt-out, veja a <a href="/cookies">Politica de Cookies</a>.</p>
+
+      <h2>6. Seguranca e Armazenamento</h2>
+      <p>Os dados sao armazenados em servidores seguros fornecidos por nossos provedores. Adotamos medidas tecnicas e organizacionais para proteger contra acesso nao autorizado, perda, alteracao ou destruicao. Os dados sao mantidos apenas pelo periodo necessario para cumprir as finalidades descritas ou conforme exigido por lei.</p>
+
+      <h2>7. Seus Direitos (LGPD Art. 18)</h2>
+      <ul>
+        <li>Confirmar a existencia de tratamento</li>
+        <li>Acessar seus dados</li>
+        <li>Corrigir dados incompletos, inexatos ou desatualizados</li>
+        <li>Solicitar anonimizacao, bloqueio ou eliminacao</li>
+        <li>Solicitar portabilidade</li>
+        <li>Revogar o consentimento</li>
+        <li>Obter informacoes sobre com quem os dados foram compartilhados</li>
+      </ul>
+      <p>Para exercer: <a href="mailto:contato@doutoranathalia.com.br">contato@doutoranathalia.com.br</a>.</p>
+
+      <h2>8. Transferencia Internacional</h2>
+      <p>O Site e hospedado pela Vercel Inc., que pode ter servidores fora do Brasil. A transferencia internacional segue as diretrizes da LGPD (Art. 33), apenas para provedores que ofereçam grau adequado de protecao ou mediante clausulas contratuais especificas.</p>
+
+      <h2>9. Menores de Idade</h2>
+      <p>Os produtos sao direcionados a publico adulto (mestrandos, doutorandos, professores, pesquisadores). Nao coletamos intencionalmente dados de menores de 18 anos.</p>
+
+      <h2>10. Alteracoes nesta Politica</h2>
+      <p>Esta politica pode ser atualizada periodicamente. Alteracoes serao publicadas nesta pagina com a nova data no topo.</p>
+
+      <h2>11. Encarregado de Dados (DPO)</h2>
+      <p>Contato: <a href="mailto:contato@doutoranathalia.com.br">contato@doutoranathalia.com.br</a>.</p>
+
+      <h2>12. Autoridade Nacional</h2>
+      <p>Caso entenda que o tratamento viola a LGPD, voce pode apresentar reclamacao a Autoridade Nacional de Protecao de Dados (ANPD): <a href="https://www.gov.br/anpd" target="_blank" rel="noopener noreferrer">www.gov.br/anpd</a>.</p>
+    </article>
+  </main>
+
+  <footer class="border-t border-black/5 mt-16">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+      <p class="font-montserrat font-semibold text-sm mb-1" style="color: var(--cor-premium);">Souza &amp; Cavichiolli Treinamentos Ltda</p>
+      <p class="font-dm text-xs text-black/60">CNPJ: 51.397.398/0001-82</p>
+      <div class="mt-4 flex flex-wrap justify-center gap-x-4 gap-y-2 font-dm text-xs">
+        <a href="/termos" class="hover:opacity-70" style="color: var(--cor-accent);">Termos de Uso</a>
+        <a href="/privacidade" class="hover:opacity-70" style="color: var(--cor-accent);">Politica de Privacidade</a>
+        <a href="/cookies" class="hover:opacity-70" style="color: var(--cor-accent);">Politica de Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function() {
+      var btn = document.getElementById('btn-voltar');
+      if (!btn) return;
+      var ref = document.referrer;
+      if (ref) {
+        try {
+          var refUrl = new URL(ref);
+          if (refUrl.hostname === window.location.hostname) {
+            btn.href = ref;
+          }
+        } catch (e) {}
+      }
+    })();
+  </script>
+
+</body>
+</html>
